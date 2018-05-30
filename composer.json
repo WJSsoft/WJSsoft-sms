@@ -1,5 +1,5 @@
 {
-    "name": "JSsoft/sms-sdk",
+    "name": "JSsoft/software",
     "description": "各个平台发送短信",
     "type": "library",
     "license": "MIT",
@@ -15,7 +15,9 @@
     },
     "autoload": {
         "psr-4": {
-            "JSsoft\\sms\\": "JSsoft/sms-sdk"
+            "JSsoft\\smsSdk\\": "JSsoft/sms-sdk",
+            "JSsoft\\paySdk\\": "JSsoft/pay-sdk",
+            "JSsoft\\identCheckSdk\\": "JSsoft/ident-check-sdk"
         }
     }
 }

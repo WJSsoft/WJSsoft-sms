@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "65fc153cad79ec5630818d34a93fec24",
+    "content-hash": "69f0d663f78abeef27807147cdf4bf84",
     "packages": [
         {
             "name": "yurunsoft/pay-sdk",
