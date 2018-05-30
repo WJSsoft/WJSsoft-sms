@@ -16,5 +16,6 @@
         "psr-4": {
             "src\\sms\\": "src/sms"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
