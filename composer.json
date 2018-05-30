@@ -1,6 +1,6 @@
 {
-    "name": "iamjiangshui/sms",
-    "description": "sms",
+    "name": "JSsoft/sms-sdk",
+    "description": "各个平台发送短信",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "yurunsoft/pay-sdk": "1.0.*"
     },
     "autoload": {
         "psr-4": {
-            "src\\sms\\": "src/sms"
+            "JSsoft\\sms\\": "JSsoft/sms-sdk"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
