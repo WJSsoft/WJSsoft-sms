@@ -1,0 +1,20 @@
+{
+    "name": "iamjiangshui/sms",
+    "description": "sms",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iamjiangshui",
+            "email": "781114941@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\sms\\": "src/sms"
+        }
+    }
+}
