@@ -15,9 +15,9 @@
     },
     "autoload": {
         "psr-4": {
-            "JSsoft\\smsSdk\\": "JSsoft/sms-sdk",
-            "JSsoft\\paySdk\\": "JSsoft/pay-sdk",
-            "JSsoft\\identCheckSdk\\": "JSsoft/ident-check-sdk"
+            "WJSsoft\\smsSdk\\": "WJSsoft/sms-sdk",
+            "WJSsoft\\paySdk\\": "WJSsoft/pay-sdk",
+            "WJSsoft\\identCheckSdk\\": "WJSsoft/ident-check-sdk"
         }
     }
 }
