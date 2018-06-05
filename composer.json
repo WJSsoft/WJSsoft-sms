@@ -1,5 +1,5 @@
 {
-    "name": "wjs-soft/software",
+    "name": "wjs-soft/sms",
     "description": "各个平台发送短信",
     "type": "library",
     "license": "MIT",
