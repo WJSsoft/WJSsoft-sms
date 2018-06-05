@@ -13,7 +13,7 @@ require_once dirname(__DIR__) . '/common.php';
 $param = array(
     'accessKeyId'=>'LTAIC6lV6wHtZxmF', 'accessKeySecret'=>'qrGwrLtwBhKZr5MZstjAg5J5ibPQxf'
 );
-$smsObj = new JSsoft\smsSdk\alidayu($param);
+$smsObj = new WJSsoft\smsSdk\alidayuSms($param);
 /**
  * phoneNumber  string     // 必填，短信接收号码
  * sendDate     string  eg: 20181212       // 必填，短信发送日期，格式Ymd，支持近30天记录查询
@@ -24,7 +24,8 @@ $info = array(
     'phoneNumber'=>'phoneNumber',
     'sendDate'=>'sendDate',
     'pageSize'=>'pageSize',
-    'bizId'=>'bizId'
+    'bizId'=>'bizId',
+    'currentPage'=>'currentPage'
 );
-$res = $smsObj->sendBatch($info);
+$res = $smsObj->querySendDetails($info);
 var_dump($res);

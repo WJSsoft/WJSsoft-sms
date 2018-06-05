@@ -109,11 +109,11 @@ class alidayuSms {
             }
             //判断入参的值是否设置以及是否符合格式
             //必填，判断手机号
-            if (!isset($info['phoneNumber'])) {
-                throw new \Exception('phoneNumber 未设置，请检查');
+            if (!isset($info['PhoneNumbers'])) {
+                throw new \Exception('PhoneNumbers 未设置，请检查');
             } else {
-                if (empty($info['phoneNumber'])) {
-                    throw new \Exception('phoneNumber 为必填项，不能为空');
+                if (empty($info['PhoneNumbers'])) {
+                    throw new \Exception('PhoneNumbers 为必填项，不能为空');
                 }
             }
             //必填，判断短信签名
@@ -159,7 +159,7 @@ class alidayuSms {
         //可选-启用https协议
         //$request->setProtocol("https");
         // 必填，设置短信接收号码
-        $request->setPhoneNumbers($info['phoneNumber']);
+        $request->setPhoneNumbers(is_array($info['PhoneNumbers']) ? implode($info['PhoneNumbers']) : $info['PhoneNumbers']);
         // 必填，设置签名名称，应严格按"签名名称"填写，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
         $request->setSignName($info['signName']);
         // 必填，设置模板CODE，应严格按"模板CODE"填写, 请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/template
@@ -184,18 +184,6 @@ class alidayuSms {
         try {
             if (!is_array($info)) {
                 throw new \Exception('信息参数必须为数组传参');
-            }
-            //过滤传值中的空格
-            foreach ($info as $k => $v) {
-                if (is_array($info[$k])) {
-                    if (!is_array($info[$k])) {
-                        foreach ($info[$k] as $kk => $vv) {
-                            $info[$k][$kk] = trim($info[$k][$kk]);
-                        }
-                    }
-                } else {
-                    $info[$k] = trim($info[$k]);
-                }
             }
             //判断入参的值是否设置以及是否符合格式
             //必填，判断手机号
@@ -332,7 +320,7 @@ class alidayuSms {
         // 必填，分页大小
         $request->setPageSize($info['pageSize']);
         // 必填，当前页码
-        $request->setCurrentPage(1);
+        $request->setCurrentPage((isset($info['CurrentPage']) && !empty($info['CurrentPage'])) ? $info['CurrentPage'] : 1);
         // 选填，短信发送流水号
         $request->setBizId((isset($info['bizId']) && !empty($info['bizId'])) ? $info['bizId'] : '');
         // 发起访问请求

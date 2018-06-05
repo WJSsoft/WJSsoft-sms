@@ -1,5 +1,6 @@
 <?php
 
+
 require 'vendor/autoload.php';
 /**
  * accessKeyId      您阿里大于的 accessKeyId
@@ -20,9 +21,7 @@ $res = $alidayuMsg->receiveMsg(
      * @return bool 返回true，则工具类自动删除已拉取的消息。返回false，消息不删除可以下次获取
      */
     function ($message) {
-    	var_dump(json_decode(json_encode($message),TRUE));
-//      print_r($message);
-        return false;
+    	return json_encode(json_decode(json_encode($message),TRUE));
     }
 );
 

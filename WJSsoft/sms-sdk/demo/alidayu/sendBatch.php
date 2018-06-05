@@ -13,7 +13,7 @@ require_once dirname(__DIR__) . '/common.php';
 $param = array(
     'accessKeyId'=>'LTAIC6lV6wHtZxmF', 'accessKeySecret'=>'qrGwrLtwBhKZr5MZstjAg5J5ibPQxf'
 );
-$smsObj = new JSsoft\smsSdk\alidayu($param);
+$smsObj = new WJSsoft\smsSdk\alidayuSms($param);
 /**
  * phoneNumbers  array   索引数组   // 必填:待发送手机号。支持JSON格式的批量调用，批量上限为100个手机号码,批量调用相对于单条调用及时性稍有延迟,验证码类型的短信推荐使用单条调用的方式
  * signName     array    索引数组    必填:短信签名-支持不同的号码发送不同的短信签名，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
