@@ -5,10 +5,6 @@
       <sourceFolder url="file://$MODULE_DIR$/WJSsoft/ident-check-sdk" isTestSource="false" packagePrefix="WJSsoft\identCheckSdk\" />
       <sourceFolder url="file://$MODULE_DIR$/WJSsoft/sms-sdk" isTestSource="false" packagePrefix="WJSsoft\smsSdk\" />
       <sourceFolder url="file://$MODULE_DIR$/WJSsoft/pay-sdk" isTestSource="false" packagePrefix="WJSsoft\paySdk\" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/yurunsoft/pay-sdk" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/yurunsoft/yurun-event" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/yurunsoft/yurun-http" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -10,8 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "yurunsoft/pay-sdk": "1.0.*"
+        "php": ">=5.4"
     },
     "autoload": {
         "psr-4": {
