@@ -4,6 +4,9 @@
     <option name="servers">
       <webServer id="57c752aa-0343-469d-b9c0-a26095eac93d" name="wamp" url="http://127.0.0.1/JSsoft">
         <fileTransfer host="140.143.94.123" port="21">
+          <advancedOptions>
+            <advancedOptions passiveMode="true" />
+          </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
