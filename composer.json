@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WJSsoft\\smsSdk\\": "WJSsoft/sms-sdk"
+            "WJSsoft_sms\\": "WJSsoft_sms"
         }
     }
 }

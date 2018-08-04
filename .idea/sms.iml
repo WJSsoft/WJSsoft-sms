@@ -2,8 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/WJSsoft/sms-sdk" isTestSource="false" packagePrefix="WJSsoft\smsSdk\" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <sourceFolder url="file://$MODULE_DIR$/WJSsoft_sms" isTestSource="false" packagePrefix="WJSsoft_sms\" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
