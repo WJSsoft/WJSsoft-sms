@@ -5,7 +5,7 @@
  * Date: 2018/5/30
  * Time: 18:42
  */
-namespace WJSsoft_sms\smsSdk;
+namespace WJSsoft_sms\ali;
 //调用阿里大鱼发送短信sdk
 ini_set("display_errors", "on");
 require_once __DIR__ . '/sdk/aliyun-dysms-php-sdk/msg_sdk/vendor/autoload.php';
@@ -17,7 +17,7 @@ use AliyunMNS\Exception\MnsException;
 use AliyunMNS\Requests\BatchReceiveMessageRequest; // 批量拉取请求
 // 加载区域结点配置
 Config::load();
-class alidayuMsg {
+class msg {
     /**
      * @var TokenGetterForAlicom
      */

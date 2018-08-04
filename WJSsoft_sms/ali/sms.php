@@ -18,7 +18,7 @@ use Aliyun\Api\Sms\Request\V20170525\SendBatchSmsRequest;
 use Aliyun\Api\Sms\Request\V20170525\QuerySendDetailsRequest;
 // 加载区域结点配置
 Config::load();
-class alidayuSms {
+class sms {
     static $acsClient = null;
     static $accessKeyId = null;//不能为空
     static $accessKeySecret = null;//不能为空
@@ -91,8 +91,7 @@ class alidayuSms {
      * 发送短信
      * @return stdClass
      */
-    public static function send($info = array())
-    {
+    public static function send($info = array()) {
         try {
             if (!is_array($info)) {
                 throw new \Exception('信息参数必须为数组传参');
@@ -109,11 +108,11 @@ class alidayuSms {
             }
             //判断入参的值是否设置以及是否符合格式
             //必填，判断手机号
-            if (!isset($info['PhoneNumbers'])) {
-                throw new \Exception('PhoneNumbers 未设置，请检查');
+            if (!isset($info['phoneNumbers'])) {
+                throw new \Exception('phoneNumbers 未设置，请检查>..');
             } else {
-                if (empty($info['PhoneNumbers'])) {
-                    throw new \Exception('PhoneNumbers 为必填项，不能为空');
+                if (empty($info['phoneNumbers'])) {
+                    throw new \Exception('phoneNumbers 为必填项，不能为空');
                 }
             }
             //必填，判断短信签名
@@ -159,13 +158,13 @@ class alidayuSms {
         //可选-启用https协议
         //$request->setProtocol("https");
         // 必填，设置短信接收号码
-        $request->setPhoneNumbers(is_array($info['PhoneNumbers']) ? implode($info['PhoneNumbers']) : $info['PhoneNumbers']);
+        $request->setPhoneNumbers(is_array($info['phoneNumbers']));
         // 必填，设置签名名称，应严格按"签名名称"填写，请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/sign
         $request->setSignName($info['signName']);
         // 必填，设置模板CODE，应严格按"模板CODE"填写, 请参考: https://dysms.console.aliyun.com/dysms.htm#/develop/template
         $request->setTemplateCode($info['templateCode']);
         // 可选，设置模板参数, 假如模板中存在变量需要替换则为必填项
-        $request->setTemplateParam(json_encode((isset($info['data']) && !empty($info['data'])) ? $info['data'] : ''), JSON_UNESCAPED_UNICODE); // 短信模板中字段的值, JSON_UNESCAPED_UNICODE;
+        $request->setTemplateParam(json_encode((isset($info['data']) && !empty($info['data'])) ? $info['data'] : '', JSON_UNESCAPED_UNICODE));
         // 可选，设置流水号
         $request->setOutId((isset($info['outId']) && !empty($info['outId'])) ? $info['outId'] : '');
         // 选填，上行短信扩展码（扩展码字段控制在7位或以下，无特殊需求用户请忽略此字段）
@@ -179,8 +178,7 @@ class alidayuSms {
      * 批量发送短信
      * @return stdClass
      */
-    public static function sendBatch($info = array())
-    {
+    public static function sendBatch($info = array()) {
         try {
             if (!is_array($info)) {
                 throw new \Exception('信息参数必须为数组传参');
@@ -230,7 +228,7 @@ class alidayuSms {
                 }
             }
             //选填，如果有 upExtendCode 传进来，判断是否符合要求，必须为数组
-            if (isset($info['upExtendCode'])) {
+            if (isset($info['upExtendCode']) && !empty($info['upExtendCode'])) {
                 if (!is_array($info['upExtendCode'])) {
                     throw new \Exception('upExtendCode 参数请传入数组格式');
                 }
