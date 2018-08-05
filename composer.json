@@ -1,16 +1,15 @@
 {
     "name": "wjs-soft/sms",
     "description": "各个平台发送短信",
-    "license": "MIT",
+    "license": "IT License",
     "authors": [
         {
             "name": "iamjiangshui",
             "email": "781114941@qq.com"
         }
     ],
-    "require": {
-        "php": ">=5.4"
-    },
+    "minimum-stability": "dev",
+    "require": {},
     "autoload": {
         "psr-4": {
             "WJSsoft_sms\\": "src/"
