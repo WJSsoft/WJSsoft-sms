@@ -9,8 +9,9 @@
             "email": "781114941@qq.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "^5.4|^7.0"
+    },
     "autoload": {
         "psr-4": {
             "WJSsoft_sms\\": "src/"
