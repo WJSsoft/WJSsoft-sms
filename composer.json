@@ -1,10 +1,11 @@
 {
-    "name": "wjs-soft/sms",
-    "description": "各个平台发送短信",
-    "license": "IT License",
+    "name": "wjs_soft/sms",
+    "description": "PHP集成各类短信运营商，短信发送sdk",
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
-            "name": "iamjiangshui",
+            "name": "王江水",
             "email": "781114941@qq.com"
         }
     ],
