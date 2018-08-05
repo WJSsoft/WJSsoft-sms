@@ -1,7 +1,6 @@
 {
     "name": "wjs_soft/sms",
     "description": "PHP集成各类短信运营商，短信发送sdk",
-    "type": "library",
     "license": "MIT",
     "authors": [
         {
