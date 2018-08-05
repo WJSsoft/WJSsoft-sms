@@ -5,7 +5,7 @@
  * Date: 2018/8/4
  * Time: 21:50
  */
-include_once 'vendor/autoload.php';
+include_once '../../vendor/autoload.php';
 use \WJSsoft_sms\ali\sms;
 /**
  * accessKeyId      您阿里大于的 accessKeyId
