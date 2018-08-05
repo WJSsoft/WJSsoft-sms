@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WJSsoft_sms\\": "WJSsoft_sms/"
+            "WJSsoft_sms\\": "src/"
         }
     }
 }
